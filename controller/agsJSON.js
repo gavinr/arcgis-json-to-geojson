@@ -28,5 +28,10 @@ exports.toGeoJSON = function(req, res) {
 				"data": "issue parsing"
 			});
 		}
+	} else {
+		res.send({
+			"success": false,
+			"data": "bad params"
+		});
 	}
 }
