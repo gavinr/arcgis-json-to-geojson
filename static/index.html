@@ -6,6 +6,7 @@
   <meta name="description" content="Convert a CSV to GeoJSON">
   <meta name="author" content="Gavin Rehkemper (gavinr.com)">
   <link rel="stylesheet" href="css/style.css">
+  <base target="_blank" /> 
 </head>
 <body>
   <header>
@@ -16,7 +17,7 @@
   <a href="https://github.com/gavreh/arcgis-json-to-geojson"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
   <div class="instructions">
-    <p>Copy in some ArcGIS JSON.
+    <p>Copy in some ArcGIS JSON. (<a href="http://maps.gis.co.brown.wi.us/arcgis/rest/services/Sirens/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&f=pjson">Here</a> is an example to get you started)
     </p>
   </div>
 
@@ -26,15 +27,14 @@
       <input type="button" name="convertButton" id="convertButton" value="Convert" /><br />
       <div class="gistLink" id="gistLinkContainer" style="display:none"><a href="" id="gistLink" target="_blank">Click to see map.</a></div>
       <textarea rows="10" cols="100" name="resultTextArea" id="resultTextArea" style="display:none">Result appears here.</textarea>
-      
-      
     </form>
 
   </div>
 
   <footer>
-  	<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://arcgis-json-to-geojson.aws.af.cm/bookmarklet/bookmarklet.js';})();">Bookmarklet</a> (<- Drag me to your browser links bar!)<br /><br />
-    Created by <a href="http://gavinr.com" target="_blank">Gavin Rehkemper</a>. <a href="http://twitter.com/gavinrehkemper" target="_blank">@gavinrehkemper</a>
+  	<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://arcgis-json-to-geojson.aws.af.cm/bookmarklet/bookmarklet.js';})();">Convert to GeoJSON</a> (<- I'm a bookmarklet! Drag me to your browser links bar! <a href="https://github.com/gavreh/arcgis-json-to-geojson/blob/master/README.md#bookmarklet-guide">More details</a>)<br /><br />
+    Created by <a href="http://gavinr.com" target="_blank">Gavin Rehkemper</a>. <a href="http://twitter.com/gavinrehkemper" target="_blank">@gavinrehkemper</a><br /><br />
+    Also: <A href="http://csv.togeojson.com">CSV to GeoJSON</a>
   </footer>
   <script src="js/libs/makeClass.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.js"></script>
