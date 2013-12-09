@@ -54,6 +54,6 @@ server.get(/\/?.*/, restify.serveStatic({
 server.post('/agsJSON', agsJSON.toGeoJSON);
 
 // Start the server
-server.listen(process.env.VMC_APP_PORT || 8080, function() {
+server.listen(process.env.VMC_APP_PORT || 8747, function() {
 	console.log('%s listening at %s', server.name, server.url);
 });
