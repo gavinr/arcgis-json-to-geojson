@@ -12,7 +12,7 @@ Installation
 	npm install
 	node server.js
 
-Then visit http://localhost:8080/
+Then visit http://localhost:8747/
 
 Bookmarklet Guide
 --------
