@@ -3,7 +3,7 @@ ArcGIS JSON to GeoJSON
 
 Need to convert some ArcGIS JSON to GeoJSON? This is a simple project that helps you do that.
 
-Example/Production site: http://arcgis-json-to-geojson.aws.af.cm/
+Example/Production site: http://arcgisjson.togeojson.com/
 
 
 Installation
