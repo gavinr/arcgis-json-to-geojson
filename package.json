@@ -1,13 +1,12 @@
 {
   "name": "arcgis-json-to-geojson",
   "description": "Convert ArcGIS Server JSON output to GeoJSON",
-  "homepage":"http://arcgisjson.togeojson.com",
-  "license":"CC BY-SA 3",
-  "version": "0.0.1",
-  "author":"Gavin Rehkemper <gavreh@gmail.com> (http://gavinr.com)",
+  "homepage": "http://arcgisjson.togeojson.com",
+  "license": "MIT",
+  "version": "1.0.0",
+  "author": "Gavin Rehkemper <gavin@gavinr.com> (http://gavinr.com)",
   "private": false,
   "dependencies": {
-    "restify": "2.6.0",
-    "terraformer-arcgis-parser": "1.0.0"
+    "@esri/arcgis-to-geojson-utils": "^1.0.4"
   }
 }
