@@ -6,7 +6,13 @@
   "version": "1.0.0",
   "author": "Gavin Rehkemper <gavin@gavinr.com> (http://gavinr.com)",
   "private": false,
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
   "dependencies": {
     "@esri/arcgis-to-geojson-utils": "^1.0.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }
