@@ -7,7 +7,7 @@
   "author": "Gavin Rehkemper <gavin@gavinr.com> (http://gavinr.com)",
   "private": false,
   "scripts": {
-    "deploy": "gh-pages -d ."
+    "deploy": "gh-pages -d . --add"
   },
   "dependencies": {
     "@esri/arcgis-to-geojson-utils": "^1.0.4"
