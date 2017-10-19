@@ -3,18 +3,23 @@ const JsonToGeojsonForm = {
 	<div>
 		<textarea rows="10" cols="100" v-bind:placeholder="placeholder" v-model="inputJson"></textarea><br />
 		<input type="button" value="Convert" v-on:click.prevent="convert()" /><br /><br />
-		<textarea rows="10" cols="100" v-model="resultJson" v-show="showResultArea">Result appears here.</textarea>
+		<textarea rows="10" cols="100" v-show="showResultArea">{{ resultJsonString }}</textarea><br />
+		<label v-show="showResultArea">Pretty Print <input type="checkbox" v-model="prettyPrint" /></label>
 	</div>`,
 	props: ['placeholder'],
 	data: () => {
 		return {
 			inputJson: '',
-			resultJson: ''
+			resultJson: '',
+			prettyPrint: true
 		};
 	},
 	computed: {
 		showResultArea: function() {
 			return this.resultJson !== '';
+		},
+		resultJsonString: function() {
+			return JSON.stringify(this.resultJson, null, (this.prettyPrint ? 2 : undefined));
 		}
 	},
 	methods: {
@@ -37,7 +42,7 @@ const JsonToGeojsonForm = {
 					features: geoJsonFeatures
 				}
 
-				this.resultJson = JSON.stringify(featureCollection);
+				this.resultJson = featureCollection;
 
 			} catch (e) {
 				this.resultJson = 'Invalid input.';
