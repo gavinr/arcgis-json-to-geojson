@@ -5,6 +5,7 @@
   <title>Convert ArcGIS JSON to GeoJSON</title>
   <meta name="description" content="Convert a CSV to GeoJSON">
   <meta name="author" content="Gavin Rehkemper (gavinr.com)">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <base target="_blank" /> 
 </head>
@@ -27,11 +28,15 @@
 
   <footer>
   	<!-- TODO - add bookmarklet link back when we get this working -->
-    This page uses <a href="https://github.com/Esri/arcgis-to-geojson-utils" target="_blank">arcgis-to-geojson-utils</a>. Created by <a href="http://gavinr.com" target="_blank">Gavin Rehkemper</a>.<br /><br />
+    Created by <a href="http://gavinr.com" target="_blank">Gavin Rehkemper</a>.<br />
+    This page uses <a href="https://github.com/Esri/arcgis-to-geojson-utils" target="_blank">arcgis-to-geojson-utils</a>. <br /><br />
     Also: <A href="http://csv.togeojson.com">CSV to GeoJSON</a>
   </footer>
   
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <script src="node_modules/%40esri/arcgis-to-geojson-utils/dist/arcgis-to-geojson.js"></script>
   <script src="js/app.js"></script>
 </body>
