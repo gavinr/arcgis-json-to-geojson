@@ -14,7 +14,7 @@ Development: Installation
 Credit
 ------
 
-This is just a web apge wrapper that gives you access to the tools in:
+This is just a web page wrapper that gives you access to the tools in:
 
 * [arcgis-to-geojson-utils](https://github.com/Esri/arcgis-to-geojson-utils)
 
