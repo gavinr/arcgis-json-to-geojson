@@ -1,15 +1,12 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
 
-pids
-logs
-results
-build
-
-node_modules
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

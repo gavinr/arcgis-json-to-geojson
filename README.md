@@ -1,25 +1,18 @@
-ArcGIS JSON to GeoJSON
-======================
+# arcgis-json-to-geojson
 
-Need to convert some ArcGIS JSON to GeoJSON? This is a simple project that helps you do that.
+> Convert ArcGIS JSON to GeoJSON
 
-View the site: http://arcgisjson.togeojson.com/
+## Build Setup
 
+``` bash
+# install dependencies
+npm install
 
-Development: Installation
---------
+# serve with hot reload at localhost:8080
+npm run dev
 
-- `npm install`
+# build for production with minification
+npm run build
+```
 
-Credit
-------
-
-This is just a web page wrapper that gives you access to the tools in:
-
-* [arcgis-to-geojson-utils](https://github.com/Esri/arcgis-to-geojson-utils)
-
-
-Feedback
---------
-
-File bug reports here on GitHub or contact [Gavin Rehkemper](http://github.com/gavinr) [(gavinrehkemper @ twitter)](http://twitter.com/gavinrehkemper) for anything else.
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -1,40 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Convert ArcGIS JSON to GeoJSON</title>
-  <meta name="description" content="Convert a CSV to GeoJSON">
-  <meta name="author" content="Gavin Rehkemper (gavinr.com)">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <base target="_blank" /> 
-</head>
-<body>
-  <header>
-    <h1>Convert ArcGIS JSON to GeoJSON</h1>
-  </header>
-  
-
-  <div class="instructions">
-    <p>Copy in some ArcGIS JSON. (<a href="http://maps.gis.co.brown.wi.us/arcgis/rest/services/Sirens/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&f=pjson">Here</a> is an example to get you started)
-    </p>
-  </div>
-
-  <div id="app" class="csvForm">
-      <json-to-geojson-form placeholder="Put ArcGIS JSON here"></json-to-geojson-form>
-  </div>
-
-  <footer>
-  	<!-- TODO - add bookmarklet link back when we get this working -->
-    More info on <a href="https://github.com/gavinr/arcgis-json-to-geojson">GitHub</a><br />
-    Also: <A href="http://csv.togeojson.com">CSV to GeoJSON</a>
-  </footer>
-  
-  <script src="https://unpkg.com/vue@2.5.6/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios@0.17.1/dist/axios.min.js"></script>
-  <script src="https://unpkg.com/sweetalert@2.0.8/dist/sweetalert.min.js"></script>
-
-  <script src="node_modules/%40esri/arcgis-to-geojson-utils/dist/arcgis-to-geojson.js"></script>
-  <script src="js/app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>arcgis-json-to-geojson</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+  </body>
 </html>
