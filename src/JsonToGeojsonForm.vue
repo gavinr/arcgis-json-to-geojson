@@ -1,14 +1,22 @@
-const JsonToGeojsonForm = {
-	template: `
-	<div>
-		<textarea rows="10" cols="100" v-bind:placeholder="placeholder" v-model="inputJson"></textarea><br />
-		<input type="button" value="Convert" v-on:click.prevent="convert()" /><br /><br />
-		<textarea rows="10" cols="100" v-show="showResultArea">{{ resultJsonString }}</textarea><br />
-		<label v-show="showResultArea">Pretty Print <input type="checkbox" v-model="prettyPrint" /></label> 
-		<input type="button" value="Visualize via Gist" v-show="showResultArea && gistLink === ''" v-on:click.prevent="postToGist()" />
-		<span v-show="gistLink"><a v-bind:href="gistLink">See map!</a></span>
-	</div>`,
-	props: ['placeholder'],
+<template>
+  <div>
+    <textarea rows="10" cols="100" v-bind:placeholder="placeholder" v-model="inputJson"></textarea><br />
+    <input type="button" value="Convert" v-on:click.prevent="convert()" /><br /><br />
+    <textarea rows="10" cols="100" v-show="showResultArea" v-model="resultJsonString"></textarea><br />
+    <label v-show="showResultArea">Pretty Print <input type="checkbox" v-model="prettyPrint" /></label> 
+    <input type="button" value="Visualize via Gist" v-show="showResultArea && gistLink === ''" v-on:click.prevent="postToGist()" />
+    <span v-show="gistLink"><a v-bind:href="gistLink">See map!</a></span>
+  </div>
+</template>
+
+<script>
+import ArcgisToGeojsonUtils from '@esri/arcgis-to-geojson-utils';
+import swal from 'sweetalert/dist/sweetalert.min';
+import axios from 'axios/dist/axios.min';
+
+export default {
+  name: 'JsonToGeojsonForm',
+  props: ['placeholder'],
 	data: () => {
 		return {
 			inputJson: '',
@@ -93,11 +101,9 @@ const JsonToGeojsonForm = {
 			
 		}
 	}
-};
+}
+</script>
 
-var app = new Vue({
-  el: '#app',
-  components: {
-		'json-to-geojson-form': JsonToGeojsonForm
-	}
-})
+<style lang="scss">
+
+</style>
