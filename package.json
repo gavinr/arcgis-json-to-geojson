@@ -11,10 +11,11 @@
     "deploy": "gh-pages -d . --add"
   },
   "dependencies": {
-    "vue": "^2.5.11",
     "@esri/arcgis-to-geojson-utils": "^1.0.4",
     "axios": "^0.17.1",
-    "sweetalert": "^2.0.8"
+    "bootstrap": "^4.0.0-beta.3",
+    "sweetalert": "^2.0.8",
+    "vue": "^2.5.11"
   },
   "browserslist": [
     "> 1%",

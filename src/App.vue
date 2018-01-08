@@ -10,8 +10,15 @@
       </p>
     </div>
   
-    <div id="app" class="csvForm">
-        <json-to-geojson-form placeholder="Put ArcGIS JSON here"></json-to-geojson-form>
+    <div id="app" class="csvForm container-fluid">
+      <div class="row">
+        <div class="col-sm">
+          <json-to-geojson-form placeholder="Put ArcGIS JSON here"></json-to-geojson-form>
+        </div>
+        <div class="col-sm">
+          <!-- todo: map goes here? -->
+        </div>
+      </div>
     </div>
   
     <footer>
@@ -33,21 +40,25 @@ export default {
     }
   },
    components: {
-		'json-to-geojson-form': JsonToGeojsonForm
-	}
+    'json-to-geojson-form': JsonToGeojsonForm
+  }
 }
 </script>
 
 <style lang="scss">
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
 html, body {
-	margin: 20px;
-	font-family: 'Lato', sans-serif;
+  margin: 20px;
+  font-family: 'Lato', sans-serif;
 }
 
 footer,
 footer a {
-	color: #C0C0C0;
-	size: 0.8rem;
-	text-align: center;
+  color: #C0C0C0;
+  size: 0.8rem;
+  text-align: center;
+  margin-top: 30px;
 }
 </style>
