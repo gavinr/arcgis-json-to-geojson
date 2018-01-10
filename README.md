@@ -1,10 +1,11 @@
 ArcGIS JSON to GeoJSON
 ======================
 
-Need to convert some ArcGIS JSON to GeoJSON? This is a simple project that helps you do that.
+Need to convert some ArcGIS JSON to GeoJSON? This is a simple page that helps you do that.
+
+[![screenshot](https://i.imgur.com/d26vDKM.jpg)](http://arcgisjson.togeojson.com/)
 
 View the site: http://arcgisjson.togeojson.com/
-
 
 Development: Installation
 --------
