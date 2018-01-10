@@ -71,6 +71,7 @@ export default {
         }
 
         this.resultJson = featureCollection;
+        this.$emit('geojson', featureCollection);
         this.gistLink = '';
       } catch (e) {
         this.resultJson = 'Invalid input.';
