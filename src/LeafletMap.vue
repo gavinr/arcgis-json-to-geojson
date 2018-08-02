@@ -4,7 +4,7 @@
 
 <script>
 import L from 'leaflet';
-import esri from 'esri-leaflet';
+import * as esri from 'esri-leaflet';
 L.esri = esri;
 
 // BUG https://github.com/Leaflet/Leaflet/issues/4968#issuecomment-319569682
