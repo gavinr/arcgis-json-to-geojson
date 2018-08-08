@@ -12,11 +12,9 @@
   },
   "dependencies": {
     "@esri/arcgis-to-geojson-utils": "^1.3.0",
-    "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
     "esri-leaflet": "^2.2.2",
     "leaflet": "^1.3.3",
-    "sweetalert": "^2.1.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
