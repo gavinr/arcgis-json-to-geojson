@@ -51,7 +51,7 @@ export default {
     }
   },
   methods: {
-    convert: function(evt) {
+    convert: function() {
       try {
         const inputJson = JSON.parse(this.inputJson);
         // if this is an object, assume FeatureSet. If array, assume array of features.
@@ -79,7 +79,7 @@ export default {
       }
     },
 
-    postToGist: function(evt) {
+    postToGist: function() {
       swal({
         title: "Are you sure?",
         content: {
@@ -111,8 +111,8 @@ export default {
           .then(function (response) {
             this.gistLink = response.data.html_url;
           }.bind(this))
-          .catch(function (error) {
-            console.log(error);
+          .catch(function() {
+            // console.error(error);
           });
         }
       }.bind(this));

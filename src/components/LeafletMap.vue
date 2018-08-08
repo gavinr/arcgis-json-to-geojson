@@ -44,7 +44,9 @@ export default {
     },
     center: {
       type: Array,
-      default: [-122, 38],
+      default: function() {
+        return [-122, 38];
+      },
     },
     zoom: {
       type: Number,
@@ -95,7 +97,7 @@ export default {
   methods: {
     addGeoJSONData(geojsonData) {
       // cannot figure out what event to use here instead of setTimeout:
-      setTimeout(function(evt) {
+      setTimeout(function() {
         this.mapObject.fitBounds(this.layer.getBounds());
       }.bind(this), 800);
       

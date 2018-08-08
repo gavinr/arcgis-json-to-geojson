@@ -6,7 +6,9 @@
     
   
     <div class="instructions">
-      <p>Copy in some ArcGIS JSON. (<a href="https://sampleserver6.arcgisonline.com/arcgis/rest/services/Hurricanes/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=&f=pjson" target="_blank">Here</a> is an example to get you started)
+      <p>Copy in some ArcGIS JSON. (<a href="https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0/query?where=pop2000+%3E+500000&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=&queryByDistance=&returnExtentsOnly=false&datumTransformation=&parameterValues=&rangeValues=&f=pjson" target="_blank">Here</a> is an example to get you started)
+      <!-- Another example URL: -->
+      <!-- https://sampleserver6.arcgisonline.com/arcgis/rest/services/Hurricanes/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=&f=pjson -->
       </p>
     </div>
   
@@ -27,15 +29,15 @@
   
     <footer>
       <!-- TODO - add bookmarklet link back when we get this working -->
-      More info on <a href="https://github.com/gavinr/arcgis-json-to-geojson">GitHub</a><br />
+      <a href="https://github.com/gavinr/arcgis-json-to-geojson">GitHub</a><br />
       Also: <A href="http://csv.togeojson.com">CSV to GeoJSON</a>
     </footer>
   </div>
 </template>
 
 <script>
-import JsonToGeojsonForm from "./JsonToGeojsonForm";
-import LeafletMap from './LeafletMap';
+import JsonToGeojsonForm from "./components/JsonToGeojsonForm";
+import LeafletMap from './components/LeafletMap';
 
 export default {
   name: 'app',
