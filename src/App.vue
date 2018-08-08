@@ -29,13 +29,14 @@
   
     <footer>
       <!-- TODO - add bookmarklet link back when we get this working -->
-      <a href="https://github.com/gavinr/arcgis-json-to-geojson">GitHub</a><br />
+      <a class="github-button" href="https://github.com/gavinr/arcgis-json-to-geojson" data-show-count="true" aria-label="Star gavinr/arcgis-json-to-geojson on GitHub">Star</a><br />
       Also: <A href="http://csv.togeojson.com">CSV to GeoJSON</a>
     </footer>
   </div>
 </template>
 
 <script>
+import GithubButtons from "./assets/buttons.js";  // eslint-disable-line no-unused-vars
 import JsonToGeojsonForm from "./components/JsonToGeojsonForm";
 import LeafletMap from './components/LeafletMap';
 
