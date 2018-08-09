@@ -3,8 +3,17 @@
     <div class="form-group">
       <textarea rows="10" class="form-control" v-bind:placeholder="placeholder" v-model="inputJson"></textarea>
     </div>
+    
     <div class="form-group float-right">
       <button type="button" class="btn btn-primary" v-on:click.prevent="convert()">Convert</button>
+    </div>
+
+    <div class="form-row align-items-center" v-if="showWgs84Alert">
+      <div class="col">
+        <div class="alert alert-warning" role="alert">
+          It looks like your FeatureSet has features with geometries with spatial references not in Latitude/Longitude (WGS84). In general, GeoJSON only works with WGS84, which is why the map probably looks wrong, so you probably want to change your input data to have that spatial reference. Try setting the "Output Sptaial Reference" to 4326.
+        </div> 
+      </div>
     </div>
 
     <div class="form-group">
@@ -30,7 +39,8 @@ export default {
     return {
       inputJson: '',
       resultJson: '',
-      prettyPrint: true
+      prettyPrint: true,
+      showWgs84Alert: false
     };
   },
   computed: {
@@ -45,6 +55,11 @@ export default {
     convert: function() {
       try {
         const inputJson = JSON.parse(this.inputJson);
+
+        this.showWgs84Alert = false;
+        if(inputJson.hasOwnProperty('spatialReference') && inputJson.spatialReference.hasOwnProperty('wkid') && inputJson.spatialReference.wkid !==4326) {
+          this.showWgs84Alert = true;
+        }
         // if this is an object, assume FeatureSet. If array, assume array of features.
         let features = inputJson;
         if(!Array.isArray(inputJson)) {
