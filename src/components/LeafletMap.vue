@@ -123,5 +123,6 @@ export default {
   .component {
     background-color: gray;
     height: 100%;
+    min-height: 300px;
   }
 </style>
