@@ -67,7 +67,7 @@ export default {
 
 html, body {
   margin: 20px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 footer,

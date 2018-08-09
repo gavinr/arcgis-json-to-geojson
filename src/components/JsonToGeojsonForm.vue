@@ -71,6 +71,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+  textarea {
+    font-family: 'Roboto Mono', monospace;
+  }
 </style>
