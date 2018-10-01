@@ -3,7 +3,7 @@
     <div class="form-group">
       <textarea rows="10" class="form-control" v-bind:placeholder="placeholder" v-model="inputJson"></textarea>
     </div>
-    
+
     <div class="form-group float-right">
       <button type="button" class="btn btn-primary" v-on:click.prevent="convert()">Convert</button>
     </div>
@@ -12,7 +12,7 @@
       <div class="col">
         <div class="alert alert-warning" role="alert">
           It looks like your FeatureSet has features with geometries with spatial references not in Latitude/Longitude (WGS84). In general, GeoJSON only works with WGS84, which is why the map probably looks wrong, so you probably want to change your input data to have that spatial reference. Try setting the "Output Sptaial Reference" to 4326.
-        </div> 
+        </div>
       </div>
     </div>
 
@@ -22,7 +22,13 @@
 
     <div class="form-row align-items-center">
       <div class="col">
-        <label v-show="showResultArea">Pretty Print <input type="checkbox" v-model="prettyPrint" /></label> 
+        <label v-show="showResultArea">Pretty Print <input type="checkbox" v-model="prettyPrint" /></label>
+      </div>
+      <div class="col">
+        <button type="button"
+          v-clipboard:copy="resultJsonString"
+          v-clipboard:success="onCopy"
+          v-clipboard:error="onError">{{ copyText }}</button>
       </div>
     </div>
 
@@ -40,7 +46,8 @@ export default {
       inputJson: '',
       resultJson: '',
       prettyPrint: true,
-      showWgs84Alert: false
+      showWgs84Alert: false,
+      copyText: 'Copy !!',
     };
   },
   computed: {
@@ -49,7 +56,7 @@ export default {
     },
     resultJsonString: function() {
       return JSON.stringify(this.resultJson, null, (this.prettyPrint ? 2 : undefined));
-    }
+    },
   },
   methods: {
     convert: function() {
@@ -81,7 +88,13 @@ export default {
       } catch (e) {
         this.resultJson = 'Invalid input.';
       }
-    }
+    },
+    onCopy() {
+      this.copyText = 'Copied';
+    },
+    onError() {
+      this.copyText = 'Can not copy';
+    },
   }
 }
 </script>
