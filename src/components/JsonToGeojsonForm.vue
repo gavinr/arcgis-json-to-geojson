@@ -20,12 +20,10 @@
       <textarea rows="10" class="form-control" v-show="showResultArea" v-model="resultJsonString"></textarea>
     </div>
 
-    <div class="form-row align-items-center">
-      <div class="col">
-        <label v-show="showResultArea">Pretty Print <input type="checkbox" v-model="prettyPrint" /></label>
-      </div>
-      <div class="col">
-        <button type="button"
+    <div class="form-row" v-show="showResultArea">
+      <div class="col d-flex align-items-center justify-content-between">
+        <label class="m-0" v-show="showResultArea">Pretty Print <input type="checkbox" v-model="prettyPrint" /></label>
+        <button type="button" class="btn btn-primary"
           v-clipboard:copy="resultJsonString"
           v-clipboard:success="onCopy"
           v-clipboard:error="onError">{{ copyText }}</button>
@@ -47,7 +45,7 @@ export default {
       resultJson: '',
       prettyPrint: true,
       showWgs84Alert: false,
-      copyText: 'Copy !!',
+      copyText: 'Copy',
     };
   },
   computed: {
