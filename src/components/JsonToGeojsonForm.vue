@@ -45,6 +45,7 @@ export default {
       resultJson: '',
       prettyPrint: true,
       showWgs84Alert: false,
+      originalCopyText: 'Copy',
       copyText: 'Copy',
     };
   },
@@ -89,6 +90,9 @@ export default {
     },
     onCopy() {
       this.copyText = 'Copied';
+      setTimeout(() => {
+        this.copyText = this.originalCopyText;
+      }, 2000)
     },
     onError() {
       this.copyText = 'Can not copy';
