@@ -59,33 +59,40 @@ export default {
   },
   methods: {
     convert: function() {
+      let inputJson = false;
       try {
-        const inputJson = JSON.parse(this.inputJson);
-
-        this.showWgs84Alert = false;
-        if(inputJson.hasOwnProperty('spatialReference') && inputJson.spatialReference.hasOwnProperty('wkid') && inputJson.spatialReference.wkid !==4326) {
-          this.showWgs84Alert = true;
-        }
-        // if this is an object, assume FeatureSet. If array, assume array of features.
-        let features = inputJson;
-        if(!Array.isArray(inputJson)) {
-          features = inputJson.features;
-        }
-        const geoJsonFeatures = features.map((feature, i) => {
-          let f = ArcgisToGeojsonUtils.arcgisToGeoJSON(feature);
-          f.id = i;
-          return f;
-        });
-
-        let featureCollection = {
-          type: 'FeatureCollection',
-          features: geoJsonFeatures
-        }
-
-        this.resultJson = featureCollection;
-        this.$emit('geojson', featureCollection);
+        inputJson = JSON.parse(this.inputJson);
       } catch (e) {
-        this.resultJson = 'Invalid input.';
+        this.resultJson = 'Invalid JSON. Please check using jsonlint.com.';
+      }
+
+      if(inputJson) {
+        try {
+          this.showWgs84Alert = false;
+          if(inputJson.hasOwnProperty('spatialReference') && inputJson.spatialReference.hasOwnProperty('wkid') && inputJson.spatialReference.wkid !==4326) {
+            this.showWgs84Alert = true;
+          }
+          // if this is an object, assume FeatureSet. If array, assume array of features.
+          let features = inputJson;
+          if(!Array.isArray(inputJson)) {
+            features = inputJson.features;
+          }
+          const geoJsonFeatures = features.map((feature, i) => {
+            let f = ArcgisToGeojsonUtils.arcgisToGeoJSON(feature);
+            f.id = i;
+            return f;
+          });
+  
+          let featureCollection = {
+            type: 'FeatureCollection',
+            features: geoJsonFeatures
+          }
+  
+          this.resultJson = featureCollection;
+          this.$emit('geojson', featureCollection);
+        } catch (e) {
+          this.resultJson = 'Invalid input.';
+        }
       }
     },
     onCopy() {
