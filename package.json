@@ -1,7 +1,7 @@
 {
   "name": "arcgis-json-to-geojson",
   "description": "Convert ArcGIS JSON to GeoJSON",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "author": "Gavin Rehkemper <gavin@gavinr.com>",
   "license": "MIT",
   "private": true,
