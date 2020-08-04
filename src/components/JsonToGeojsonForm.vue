@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import ArcgisToGeojsonUtils from '@esri/arcgis-to-geojson-utils';
+import { arcgisToGeoJSON } from "@terraformer/arcgis"
 
 export default {
   name: 'JsonToGeojsonForm',
@@ -78,7 +78,7 @@ export default {
             features = inputJson.features;
           }
           const geoJsonFeatures = features.map((feature, i) => {
-            let f = ArcgisToGeojsonUtils.arcgisToGeoJSON(feature);
+            let f = arcgisToGeoJSON(feature);
             f.id = i;
             return f;
           });
