@@ -23,7 +23,7 @@ Credit
 
 This is just a web page wrapper that gives you access to the tools in:
 
-* [@terraformer/arcgis](https://github.com/terraformer-js/terraformer/blob/master/packages/arcgis/README.md) (formerly[arcgis-to-geojson-utils](https://github.com/Esri/arcgis-to-geojson-utils) which have been moved to `@terraformer`)
+* [@terraformer/arcgis](https://github.com/terraformer-js/terraformer/blob/master/packages/arcgis/README.md) (formerly [arcgis-to-geojson-utils](https://github.com/Esri/arcgis-to-geojson-utils) which have been moved to `@terraformer`)
 
 Built using [vue-cli version 3](https://cli.vuejs.org/).
 
