@@ -1,7 +1,7 @@
 {
   "name": "arcgis-json-to-geojson",
   "description": "Convert ArcGIS JSON to GeoJSON",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Gavin Rehkemper <gavin@gavinr.com>",
   "license": "MIT",
   "private": true,
@@ -11,20 +11,24 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@terraformer/arcgis": "^2.0.1",
-    "bootstrap": "^4.3.1",
-    "esri-leaflet": "^2.2.4",
-    "leaflet": "^1.5.1",
-    "vue": "^2.6.10",
-    "vue-clipboard2": "^0.3.0"
+    "@terraformer/arcgis": "^2.0.7",
+    "bootstrap": "^4.5.0",
+    "esri-leaflet": "^2.4.1",
+    "leaflet": "^1.6.0",
+    "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
